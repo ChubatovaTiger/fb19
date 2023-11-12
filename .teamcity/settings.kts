@@ -44,4 +44,21 @@ object Build1a : BuildType({
             scriptContent = "ls"
         }
     }
+   dependencies {
+        snapshot(Build2) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
+})
+
+object Build2 : BuildType({
+    name = "build2"
+    id("Build2a")
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "ls"
+        }
+    }
 })
