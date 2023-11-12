@@ -32,7 +32,11 @@ project {
 
 object Build1a : BuildType({
     name = "build1"
-    id("Project1_Build1b")
+    id("Build1b")
+      triggers {
+        vcs {
+            }
+        }
     steps {
         script {
             id = "simpleRunner"
