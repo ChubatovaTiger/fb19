@@ -53,7 +53,7 @@ object Build1a : BuildType({
 
 object Build2 : BuildType({
     name = "build2"
-    id("Build2a")
+    id("Build2")
 
     steps {
         script {
